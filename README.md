@@ -2,7 +2,7 @@
 An example of telegram bot sending alerts when some metric has anomalous value
 
 ## How does it work?
-Gitlab CI/CD triggers the script every 15 minutes (you need to adjust it on their website and create .yaml file)\n
+Gitlab CI/CD triggers the script every 15 minutes (you need to adjust it on their website and create .yaml file)<br/>
 It compares every metric you want to track with its allowable range of values which is between 25%quartile - (a * [IQR](shorturl.at/oDIT2)) and 75%quartile + (a * IQR)
 You need to pass the parameters of the coefficient that we multiply IQR with and the number of values for which quartiles are calculated
 If the anomaly detected it send the report in telegram with the current value and the percentage of deviation from previous value of this metric accompanied with the handy plot where you can see the daily distribution of this metric with upper and lower boundaries of allowed range
